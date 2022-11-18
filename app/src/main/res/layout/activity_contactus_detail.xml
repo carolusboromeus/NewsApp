@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    android:alpha="0.80"
+    tools:context=".activites.DetailContact">
+
+    <!-- Container Header -->
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#010127">
+
+        <!--Image Button Back-->
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_white"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="15dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/back_description" />
+
+        <TextView
+            android:id="@+id/subTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_contact_us"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <!-- Container Photo Profile -->
+    <RelativeLayout
+        android:id="@+id/containerImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/toolbarRl"
+        android:gravity="center"
+        android:background="@drawable/back02">
+
+        <!-- Photo Profile -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_person_black"
+            android:background="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="20dp"
+            android:contentDescription="@string/gambar_profil"
+            app:shapeAppearance="@style/styleCircleImage"/>
+    </RelativeLayout>
+
+    <!-- Container Scroll View -->
+    <ScrollView
+        android:id="@+id/containerScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/containerImage">
+
+        <!-- Container Admin Info -->
+        <RelativeLayout
+            android:id="@+id/containerAdminInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Container Nama Admin -->
+            <RelativeLayout
+                android:id="@+id/containerAdminName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="10dp">
+
+                <!-- Deskripsi Nama Admin -->
+                <TextView
+                    android:id="@+id/tvNamaDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nama_mahasiswa_desc"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Informasi Nama Admin -->
+                <TextView
+                    android:id="@+id/tvNama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvNamaDesc"
+                    android:layout_marginVertical="5dp"
+                    android:text="@string/nama_mahasiswa"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Divider Nama -->
+                <View
+                    android:id="@+id/dividerNama"
+                    android:layout_width="match_parent"
+                    android:layout_height="2.5dp"
+                    android:layout_below="@id/tvNama"
+                    android:background="?android:attr/listDivider" />
+
+            </RelativeLayout>
+
+            <!-- Container NIM Admin -->
+            <RelativeLayout
+                android:id="@+id/containerAdminNIM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/containerAdminName"
+                android:layout_marginHorizontal="10dp">
+
+                <!-- Deskripsi NIM Admin -->
+                <TextView
+                    android:id="@+id/tvNIMDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/nim_mahasiswa_desc"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Informasi NIM Admin -->
+                <TextView
+                    android:id="@+id/tvNIM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvNIMDesc"
+                    android:layout_marginVertical="5dp"
+                    android:text="@string/nim_mahasiswa"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Divider NIM -->
+                <View
+                    android:id="@+id/dividerNIM"
+                    android:layout_width="match_parent"
+                    android:layout_height="2.5dp"
+                    android:layout_below="@id/tvNIM"
+                    android:background="?android:attr/listDivider" />
+
+            </RelativeLayout>
+
+            <!-- Container Kelas Admin -->
+            <RelativeLayout
+                android:id="@+id/containerAdminClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/containerAdminNIM"
+                android:layout_marginHorizontal="10dp">
+
+                <!-- Deskripsi Kelas Admin -->
+                <TextView
+                    android:id="@+id/tvKelasDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/kelas_mahasiswa_desc"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Informasi Kelas Admin -->
+                <TextView
+                    android:id="@+id/tvKelas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvKelasDesc"
+                    android:layout_marginVertical="5dp"
+                    android:text="@string/kelas_mahasiswa"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Divider Kelas -->
+                <View
+                    android:id="@+id/dividerKelas"
+                    android:layout_width="match_parent"
+                    android:layout_height="2.5dp"
+                    android:layout_below="@id/tvKelas"
+                    android:background="?android:attr/listDivider" />
+
+            </RelativeLayout>
+
+            <!-- Container Email Admin -->
+            <RelativeLayout
+                android:id="@+id/containerAdminEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_below="@+id/containerAdminClass">
+
+                <!-- Deskripsi Email Admin -->
+                <TextView
+                    android:id="@+id/tvEmailDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/email_mahasiswa_desc"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Informasi Email Admin -->
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvEmailDesc"
+                    android:layout_marginVertical="5dp"
+                    android:text="@string/email_mahasiswa"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Divider Email -->
+                <View
+                    android:id="@+id/dividerEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="2.5dp"
+                    android:layout_below="@id/tvEmail"
+                    android:background="?android:attr/listDivider" />
+
+            </RelativeLayout>
+
+            <!-- Container Nomor Telepon Admin -->
+            <RelativeLayout
+                android:id="@+id/containerAdminTelephone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_below="@+id/containerAdminEmail">
+
+                <!-- Deskripsi No Telepon Admin -->
+                <TextView
+                    android:id="@+id/tvTelpDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/no_telepon_desc"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Informasi No Telepon Admin -->
+                <TextView
+                    android:id="@+id/tvTelepon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTelpDesc"
+                    android:layout_marginVertical="5dp"
+                    android:text="@string/nomor_telepon_mahasiswa"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Divider No Telepon -->
+                <View
+                    android:id="@+id/dividerTelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2.5dp"
+                    android:layout_below="@id/tvTelepon"
+                    android:background="?android:attr/listDivider" />
+
+            </RelativeLayout>
+
+            <!-- Divider Contact Me Atas -->
+            <View
+                android:id="@+id/dividerContact"
+                android:layout_width="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_height="5dp"
+                android:layout_below="@id/containerAdminTelephone"
+                android:background="?android:attr/listDivider" />
+
+            <!-- TextView Contact Admin -->
+            <TextView
+                android:id="@+id/contactMeTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dividerContact"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:text="@string/contact_me"
+                android:fontFamily="sans-serif"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <!-- Container Image Button -->
+            <RelativeLayout
+                android:id="@+id/containerContactImage"
+                android:layout_marginBottom="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@+id/contactMeTv">
+
+                <!--Container Image Button Email -->
+                <RelativeLayout
+                    android:id="@+id/containerEmailImage"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginHorizontal="15dp">
+
+                    <ImageButton
+                        android:id="@+id/logoEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_email_black"
+                        android:contentDescription="@string/logo_email" />
+
+                </RelativeLayout>
+
+                <!-- Text View OR -->
+                <TextView
+                    android:id="@+id/orTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/containerEmailImage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="15dp"
+                    android:text="@string/or"
+                    android:fontFamily="sans-serif"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <!--Container Image Button Telephone -->
+                <RelativeLayout
+                    android:id="@+id/containerPhoneImage"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_toEndOf="@+id/orTv">
+
+                    <ImageButton
+                        android:id="@+id/logoTelepon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_phone_black"
+                        android:contentDescription="@string/logo_email" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!-- Divider Contact Me Bawah -->
+            <View
+                android:id="@+id/dividerContact2"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@id/containerContactImage"
+                android:background="?android:attr/listDivider" />
+
+            <!-- Container Footer -->
+            <RelativeLayout
+                android:id="@+id/containerFooter"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_below="@id/dividerContact2"
+                android:gravity="center_horizontal"
+                android:background="#010127">
+
+                <!--Logo Copyright -->
+                <ImageView
+                    android:id="@+id/logoCopyRight"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_baseline_copyright_24"
+                    android:contentDescription="@string/logo_copyright" />
+
+                <!-- Text View Author -->
+                <TextView
+                    android:id="@+id/tvAuthor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_toEndOf="@id/logoCopyRight"
+                    android:text="@string/kelompok_1"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

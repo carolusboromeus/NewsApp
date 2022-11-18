@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:statusBarColor ="@android:color/transparent"
+    android:alpha="0.80"
+    android:padding="20dp"
+    tools:context=".activites.MainActivity">
+
+    <ImageView
+        android:id="@+id/iconIv"
+        android:src="@drawable/globalnews_rounded"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/logo_description" />
+    
+    <TextView
+        android:id="@+id/main_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iconIv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/main_menu"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/skipBtn"
+        android:layout_marginBottom="5dp"
+        android:text="@string/button_login_description"
+        android:backgroundTint="#010127"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/skipBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="sans-serif"
+        android:text="@string/skip_login"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_person_black"
+        android:contentDescription="@string/gambar_profil" />
+
+    <TextView
+        android:id="@+id/tvNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/imgProfile"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="5dp"
+        android:text="@string/nama_mahasiswa"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvNIM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/imgProfile"
+        android:layout_below="@+id/tvNama"
+        android:layout_marginHorizontal="15dp"
+        android:layout_centerVertical="true"
+        android:layout_marginVertical="5dp"
+        android:text="@string/nim_mahasiswa"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvKelas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/imgProfile"
+        android:layout_below="@+id/tvNIM"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="5dp"
+        android:text="@string/kelas_mahasiswa"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+</RelativeLayout>

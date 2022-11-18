@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="5dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="0dp"
+    app:contentPadding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/newsRl"
+            android:layout_width="390dp"
+            android:layout_height="220dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="5dp"
+            android:background="@android:color/transparent">
+
+            <!--NewsView-->
+            <ImageView
+                android:id="@+id/newsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/titleTv"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newsRl"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="News Title"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/descriptionTv"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleTv"
+            android:layout_marginBottom="5dp"
+            android:layout_marginHorizontal="5dp"
+            android:text="@string/news_desc_short"
+            android:maxLines="2" />
+
+        <RelativeLayout
+            android:id="@+id/containerInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descriptionTv"
+            android:layout_marginHorizontal="5dp"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/authorTv"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/app_name"
+                android:maxLines="1"/>
+
+            <TextView
+                android:id="@+id/divider1Tv"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/authorTv"
+                android:layout_marginHorizontal="10dp"
+                android:layout_centerVertical="true"
+                android:text="@string/bullet_symbol"
+                android:maxLines="1"/>
+
+            <TextView
+                android:id="@+id/dateTv"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/divider1Tv"
+                android:layout_centerVertical="true"
+                android:text="dd/MM/yyyy"
+                android:maxLines="1"/>
+
+            <TextView
+                android:id="@+id/divider2Tv"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/dateTv"
+                android:layout_marginHorizontal="10dp"
+                android:layout_centerVertical="true"
+                android:text="@string/bullet_symbol"
+                android:maxLines="1"/>
+
+            <TextView
+                android:id="@+id/categoryTv"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/divider2Tv"
+                android:layout_centerVertical="true"
+                android:text="Category"
+                android:maxLines="1"/>
+
+            <ImageButton
+                android:id="@+id/shareBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_share_16" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
